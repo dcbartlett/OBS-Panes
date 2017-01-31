@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  style: none;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  min-height: 20px;
+}
+ul li {
+  display: inline-block;
+  margin: 0 5px;
+  animation: fadein 500ms linear forwards;
+  opacity: 0;
+}
+
+ul li:not(.active) {
+  left: -1000;
+  animation: fadeout 500ms linear forwards;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+@keyframes fadein {
+0% { opacity: 0; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes fadeout {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }
+}
